@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using System.Reflection;
+using AppForTest.Models;
 
 namespace ApiForMicrTest.Models
 {
@@ -13,12 +14,12 @@ namespace ApiForMicrTest.Models
     {
         
         private TestDBContext() : base("TestDBContext") { }
-        public DbSet<QuestionModel> Questions { get; set; }
-        public DbSet<UserModel> Users { get; set; }
-        public DbSet<UserQuestionModel> UserQuestions { get; set; }
-        public DbSet<UserTestModel> UserTests { get; set; }
-        public DbSet<TopicModel> Topics { get; set; }
-        public DbSet<RelationModel> Relations { get; set; }
+        public DbSet<Question> Questions { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<UserQuestion> UserQuestion { get; set; }
+        public DbSet<UserTest> UserTest { get; set; }
+        public DbSet<Topic> Topic { get; set; }
+        public DbSet<Relation> Relation { get; set; }
 
         private static TestDBContext instance;
         public static TestDBContext GetInstance()

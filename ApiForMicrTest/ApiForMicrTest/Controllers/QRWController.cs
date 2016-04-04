@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using AppForTest.Models;
+using ApiForMicrTest.Models;
 using System.Data;
 using System.Data.Entity;
 
@@ -12,7 +13,7 @@ namespace AppForTest.Controllers
 {
     public class QRWController : ApiController
     {
-        QuestionContext db = new QuestionContext();
+        TestDBContext db = TestDBContext.GetInstance();
         // GET: api/QRW
         [HttpGet]
         public IEnumerable<Question> Get()

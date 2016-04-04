@@ -7,12 +7,13 @@ using System.Web.Http;
 using AppForTest.Models;
 using System.Data;
 using System.Data.Entity;
+using ApiForMicrTest.Models;
 
 namespace AppForTest.Controllers
 {
     public class RRWController : ApiController
     {
-        RelationContext db = new RelationContext();
+        TestDBContext db = TestDBContext.GetInstance();
         // GET: api/RRW
         [HttpGet]
         public IEnumerable<Relation> Get()

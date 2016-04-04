@@ -7,12 +7,13 @@ using System.Web.Http;
 using AppForTest.Models;
 using System.Data;
 using System.Data.Entity;
+using ApiForMicrTest.Models;
 
 namespace AppForTest.Controllers
 {
     public class TRWController : ApiController
     {
-        TopicContext db = new TopicContext();
+        TestDBContext db = TestDBContext.GetInstance();
         // GET: api/TRW
         [HttpGet]
         public IEnumerable<Topic> Get()

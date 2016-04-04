@@ -19,21 +19,21 @@ namespace ApiForMicrTest.Models
         public int Topic { get; set; }
         static TestDBContext QuestionsContext = TestDBContext.GetInstance();
         
-        public async Task<IEnumerable<QuestionModel>> Get()
-        {
-            //return await QuestionsContext.Questions.ForEachAsync();
-            return QuestionsContext.Questions;
-        }
-        public static async Task<QuestionModel> Get(int id)
-        {           
-            return await QuestionsContext.Questions.FindAsync(id);
-        }
+        //public async Task<IEnumerable<QuestionModel>> Get()
+        //{
+        //    //return await QuestionsContext.Questions.ForEachAsync();
+        //    return QuestionsContext.Questions;
+        //}
+        //public static async Task<QuestionModel> Get(int id)
+        //{           
+        //    return await QuestionsContext.Questions.FindAsync(id);
+        //}
        
-        public void Post([FromBody]QuestionModel question)
-        {
-            QuestionsContext.Questions.Add(question);
-            QuestionsContext.SaveChanges();
-        }
+        //public void Post([FromBody]QuestionModel question)
+        //{
+        //    QuestionsContext.Questions.Add(question);
+        //    QuestionsContext.SaveChanges();
+        //}
         
         public void Put(int id, [FromBody]QuestionModel question)
         {

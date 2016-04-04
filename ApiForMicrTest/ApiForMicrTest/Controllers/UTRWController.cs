@@ -7,12 +7,13 @@ using System.Web.Http;
 using AppForTest.Models;
 using System.Data;
 using System.Data.Entity;
+using ApiForMicrTest.Models;
 
 namespace AppForTest.Controllers
 {
     public class UTRWController : ApiController
     {
-        UserTestContext db = new UserTestContext();
+        TestDBContext db = TestDBContext.GetInstance();
         // GET: api/UTRW
         [HttpGet]
         public IEnumerable<UserTest> Get()
