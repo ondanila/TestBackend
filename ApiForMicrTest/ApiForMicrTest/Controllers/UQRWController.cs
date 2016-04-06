@@ -33,10 +33,10 @@ namespace AppForTest.Controllers
 
         // POST: api/UQRW
         [HttpPost]
-        public void Post([FromBody]UserQuestion userquestion)
+        public async void Post([FromBody]UserQuestion userquestion)
         {
             db.UserQuestion.Add(userquestion);
-            db.SaveChanges();
+            await db.SaveChangesAsync();
         }
 
         // PUT: api/UQRW/5
