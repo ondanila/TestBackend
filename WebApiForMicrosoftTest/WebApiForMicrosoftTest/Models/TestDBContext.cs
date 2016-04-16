@@ -3,7 +3,9 @@ namespace WebApiForMicrosoftTest.Models
 {
     class TestDBContext : DbContext
     {
-        private TestDBContext() : base("TestDBContext") { }
+        private TestDBContext() : base("TestDBContext")
+        {
+        }
         public DbSet<QuestionModel> Questions { get; set; }
         public DbSet<UserModel> Users { get; set; }
         public DbSet<UserQuestionModel> UserQuestions { get; set; }
